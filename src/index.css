@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-grey-50;
+}
+
+@layer base {
+  body {
+    @apply bg-grey-50;
+    @apply font-display;
+  }
+
+  h3 {
+    @apply font-display;
+    @apply text-lg;
+    @apply font-semibold;
+    @apply text-grey-900;
+  }
+  h4 {
+    @apply font-body;
+    @apply text-base;
+    @apply font-semibold;
+    @apply text-grey-900;
+  }
+  h5 {
+    @apply font-display;
+    @apply text-sm;
+    @apply font-medium;
+    @apply text-grey-900;
+  }
+  h6 {
+    @apply font-display;
+    @apply text-sm;
+    @apply font-extrabold;
+    @apply text-grey-300;
+    text-transform: uppercase;
+  }
+  p {
+    @apply font-body;
+    @apply text-sm;
+    @apply font-normal;
+    @apply text-grey-900;
+  }
+}
+
+@layer utilities {
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @apply rounded-md;
+    @apply px-3;
+    @apply py-2;
+    @apply text-sm;
+    @apply font-semibold;
+    @apply text-center;
+  }
+
+  button.default {
+    @apply bg-blue;
+    @apply text-white;
+    @apply shadow-sm;
+    @apply hover:bg-darkblue;
+    @apply disabled:text-grey-300;
+    @apply disabled:bg-grey-50;
+    @apply disabled:hover:text-grey-300;
+    @apply disabled:hover:bg-grey-50;
+  }
+
+  button.alt {
+    @apply bg-white;
+    @apply text-grey-900;
+    @apply ring-1;
+    @apply ring-grey-900/40;
+    @apply hover:text-blue;
+    @apply hover:ring-blue;
+    @apply disabled:text-grey-300;
+    @apply disabled:bg-grey-50;
+    @apply disabled:hover:text-grey-300;
+    @apply disabled:hover:bg-grey-50;
+  }
+}
