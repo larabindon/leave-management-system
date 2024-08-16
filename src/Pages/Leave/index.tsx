@@ -186,7 +186,6 @@ export const Leave = () => {
           <TextField
             name="Reason"
             label="Reason"
-            multiline
             inputProps={{ maxLength: 50 }}
             defaultValue={leave?.Reason}
             error={error?.some((error) => error.field === "Reason")}
